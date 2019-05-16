@@ -17,7 +17,7 @@ var movies = [
     bio: 'Jack Torrance is a winter caretaker that goes to a Hotel in colorado with his family. His son, Danny is plagued by psychic premonitions.jack becomes disturb my his sons visons, discovers dark secrets in the hotel and becomes a homicidal maniac hell-bent on terrorizing his family ',
     length: 146,
     poster: 'theShining.jpg',
-    genre: ['mystery', 'psych horror']
+    genre: ['mystery', 'psychological horror']
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ var movies = [
     bio: 'An oil painted animation telling the story of Vincent Van Gogh\'s life leading up to his death.',
     length: 95,
     poster:'lovingVincent_poster.jpg',
-    genre: ['drama','mystery']
+    genre: ['drama','mystery','animation']
   },
   {
     id: 5,
@@ -48,7 +48,38 @@ var movies = [
     length: 133,
     poster: 'vForVendetta_poster.jpg',
     genre: ['drama','thriller']
+  },
+  {
+    id: 6,
+    title: 'Your Name',
+    year: 2016,
+    directors: ['Makoto Shinkai'],
+    bio: 'A teenage boy and girl embark on a quest to meet each other for the first time after they magically swap bodies.',
+    length: 112,
+    poster: 'yourName_poster.jpg',
+    genre: ['animation','fantasy','drama']
+  },
+  {
+    id: 7,
+    title: 'A Silent Voice',
+    year: 2017,
+    directors: ['Naoko Yamada'],
+    bio: 'When a grade school student with impaired hearing is bullied mercilessly, she transfers to another school. Years later, one of her former tormentors sets out to make amends.',
+    length: 130,
+    poster: 'aSilentVoice_poster.jpg',
+    genre: ['animation','romance','drama']
+  },
+  {
+    id: 8,
+    title: 'The Tale of Princess Kaguya',
+    year: 2013,
+    directors: ['Isao Takahata', 'Hidekazu Sato'],
+    bio: 'A tiny nymph found inside a bamboo stalk grows into a beautiful and desirable young woman, who orders her suitors to prove their love by completing a series of near-impossible tasks.',
+    length: 137,
+    poster: 'princessKaguya_poster.jpg',
+    genre: ['animation','drama','adventure','fantasy']
   }
+
 ];
 console.log(movies);
 var moviesList = document.getElementById('moviesList');
@@ -72,6 +103,8 @@ if(movie.genre[0] === 'drama'){
  genreClass = 'border-danger';
 } else if (movie.genre[0] === 'mystery'){
   genreClass = 'border-secondary';
+}else if (movie.genre[0] === 'animation'){
+  genreClass = 'border-success';
 }
 
 
@@ -139,7 +172,11 @@ function showMoreMovie(movieNumber){
   console.log(singleMovie);
   document.getElementById('posterImage').src= 'img/'+singleMovie.poster;
   document.getElementById('movieTitle').innerText = singleMovie.title;
-
+  document.getElementById('movieYear').innerText = singleMovie.year;
+  document.getElementById('movieDirectors').innerText = singleMovie.directors;
+  document.getElementById('movieBio').innerText = singleMovie.bio;
+  document.getElementById('movieLength').innerText = singleMovie.length;
+  document.getElementById('movieGenre').innerText = singleMovie.genre;
 
 
    document.getElementById('moviePopUp').style.display = "flex";
