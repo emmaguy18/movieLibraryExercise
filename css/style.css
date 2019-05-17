@@ -13,6 +13,7 @@
 
 .overlayContent{
   width: 80vw;
+  max-height: 70vh;
   height: 70vh;
   background-color: white;
   padding: 10px;
@@ -36,6 +37,10 @@
 .movieThumb:hover{
   opacity: 0.5;
   cursor: pointer;
+}
+
+#posterImage{
+  max-height: 100%;
 }
 
 body,html{
