@@ -82,12 +82,42 @@ var movies = [
   {
     id: 9,
     title: 'Maquia: When the Promised Flower Blooms',
-    year: 2013,
-    directors: ['Isao Takahata', 'Hidekazu Sato'],
-    bio: 'A tiny nymph found inside a bamboo stalk grows into a beautiful and desirable young woman, who orders her suitors to prove their love by completing a series of near-impossible tasks.',
-    movieLength: 137,
-    poster: 'princessKaguya_poster.jpg',
-    genre: ['animation','drama','adventure','fantasy']
+    year: 2018,
+    directors: ['Mari Okada'],
+    bio: 'An immortal girl and a normal boy meet and become friends, sharing a bond that lasts throughout the years.',
+    movieLength: 115,
+    poster: 'maquia.jpg',
+    genre: ['animation','adventure','drama','fantasy']
+  },
+  {
+    id: 10,
+    title: 'Crimson Peak',
+    year: 2015,
+    directors: ['Guillermo del Toro'],
+    bio: 'After marrying the charming and seductive Sir Thomas Sharpe, young Edith finds herself swept away to his remote gothic mansion in the English hills. Also living there is Lady Lucille, Thomas\' alluring sister and protector of her family\'s dark secrets. Able to communicate with the dead, Edith tries to decipher the mystery behind the ghostly visions that haunt her new home. As she comes closer to the truth, Edith may learn that true monsters are made of flesh and blood.',
+    movieLength: 119,
+    poster: 'crimsonPeak_poster.jpg',
+    genre: ['fantasy','horror','drama','thriller','mystery','romance']
+  },
+  {
+    id: 11,
+    title: 'Princess Mononoke',
+    year: 1997,
+    directors: ['Hayao Miyazaki'],
+    bio: 'On a journey to find the cure for a Tatarigami\'s curse, Ashitaka finds himself in the middle of a war between the forest gods and Tatara, a mining colony. In this quest he also meets San, the Mononoke Hime.',
+    movieLength: 134,
+    poster: 'princessMononoke_poster.jpg',
+    genre: ['animation','adventure','fantasy']
+  },
+  {
+    id: 12,
+    title: 'Puella Magi Madoka Magica the Movie Part 1: Beginnings',
+    year: 2012,
+    directors: ['Akiyuki Shinbo','Yukihiro Miyamoto'],
+    bio: 'A strange creature offers Madoka, a 14-year-old girl, and her best friend, Sayaka, a deal: They can have one wish granted if they become magical girls and fight witches that cause murders and suicides.',
+    movieLength: 130,
+    poster: 'madokaMagica_poster.png',
+    genre: ['animation','psychological','drama','fantasy']
   }
 
 ];
