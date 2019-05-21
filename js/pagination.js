@@ -121,18 +121,17 @@ var movies = [
   }
 ];
 
-var maxNumberOnScreen = 8;
+var maxNumberOnScreen = 4;
 var numberOfPages = Math.ceil(movies.length / maxNumberOnScreen);
 console.log(numberOfPages);
 
 if (numberOfPages > 1) {
   var pagination = document.getElementById('paginationMovies');
   for (var i = 0; i < numberOfPages; i++) {
-    pagination.innerHTML += '<li class="page-item"><a class="page-link" href="#">'+(i+1)+'</a></li>';
+    pagination.innerHTML += '<li class="page-item"><a onclick="showMovieThumbmnails('+(maxNumberOnScreen * i)+', '+(maxNumberOnScreen * (i+1) )+')" class="page-link" href="#">'+(i+1)+'</a></li>';
   }
 }
-
-
+//group way//
 // var x = 0;
 // onload();
 // function Onload(){
@@ -143,19 +142,23 @@ if (numberOfPages > 1) {
 //   }
 // }
 
+
 // Richard's way//
-if (maxNumberOnScreen < movies.length) {
+if (maxNumberOnScreen > movies.length) {
   //console.log("not enough movies for database");
   showMovieThumbmnails(0, movies.length);
 }else {
   //console.log("there is more movies to view")
   showMovieThumbmnails(0, maxNumberOnScreen);
 }
-showMovieThumbmnails(0, maxNumberOnScreen);
+
 
 function showMovieThumbmnails(start, end) {
+  document.getElementById('moviesList').innerHTML = "";
+  console.log("you clicked on page " + (end / 4));
   console.log(start);
   console.log(end);
+
   for (var i = start; i < end; i++) {
     var movie = movies[i];
     var movieCard = '<div class="col-12 col-sm-6 col-md-3 mb-3 text-center">';
@@ -169,6 +172,9 @@ function showMovieThumbmnails(start, end) {
 
   document.getElementById('moviesList').innerHTML += movieCard;
   }
+//console.log("time to view movie");
 
-  //console.log("time to view movie");
+
+
+
 }
